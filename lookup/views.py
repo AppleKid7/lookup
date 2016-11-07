@@ -28,10 +28,9 @@ def index(request):
         token_type = r_data.get('token_type')
 
         form = SearchForm(request.POST)
-        print request.POST
+
         if form.is_valid():
             city = form.data.get('city')
-            print city
             payload = {'term': form.data.get('search'),
                        'location': city}
             header = {'Authorization': token_type + ' ' + token,
@@ -40,11 +39,8 @@ def index(request):
                     'https://api.yelp.com/v3/businesses/search',
                     headers=header,
                     params=payload)
-            print response.json()
             return render(request, 'results.html',
                           {'data': response.json().get('businesses')})
-
-    # if a GET (or any other method) we'll create a blank form
     else:
         form = SearchForm()
     
