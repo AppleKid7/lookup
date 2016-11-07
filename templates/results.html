@@ -1,0 +1,9 @@
+{% block title %}
+Search Results
+{% endblock %}
+
+{% for entry in data %}
+    <p>{{ entry }}</p>
+{% empty %}
+    <p>Nothing found to fit your search criteria.</p>
+{% endfor %}
