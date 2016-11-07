@@ -15,8 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-CLIENT_ID = 'mo2g9qeh-dXqLh3PE9T4Pg'
-CLIENT_SECRET = 'cFyjE8rFMEFyMcj8SXRTCA9n6GOKRlAKrMdfYF2aWbysSp7Zys7bvqFrTEtiIgOi'
+CLIENT_ID = os.environ.get('CLIENT_ID')
+CLIENT_SECRET = os.environ.get('CLIENT_SECRET')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
