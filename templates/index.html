@@ -1,7 +1,17 @@
-{% block title %}
-Business Search
-{% endblock %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load staticfiles %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link href="{% static "css/styles.css" %}" rel="stylesheet">
+  <title>Business Search</title>
+</head>
+
+<body class="indigo lighten-5">
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
@@ -23,3 +33,5 @@ Business Search
   crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="{% static 'js/getlocation.js' %}"></script>
+</body>
+</html>
