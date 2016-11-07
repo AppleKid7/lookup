@@ -10,7 +10,7 @@
   <!--<link rel="stylesheet" href="../static/css/styles.css">-->
   <title>Search Results</title>
 </head>
-<body class="indigo lighten-5">
+<body class="indigo lighten-4">
   <div class="container">
     <h1 class="text-grey text-darken-4 center-align">Search Results</h1>
     <div class="row"> <!-- here is where you repeat the components -->
@@ -24,7 +24,7 @@
           <h5>Price: {{ entry.price }}</h5> <!--entry.price -->
           <h5>Categories:</h5>
             {% for cat in entry.categories %}
-              <h6> {{ cat }}  </h6>
+              <h6> {{ cat.title }}  </h6>
             {% empty %}
                 <h6>This is a really unique restaurant!</h6>
             {% endfor %}
