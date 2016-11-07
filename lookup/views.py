@@ -14,7 +14,6 @@ def index(request):
     if request.method == 'POST':
         client_id = CLIENT_ID
         client_secret = CLIENT_SECRET
-        host = HOST
         r = requests.post('https://api.yelp.com/oauth2/token',
 		          data={'client_id': client_id,     
                                 'grant_type': 'password',   
