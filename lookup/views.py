@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import requests
 from django.contrib import messages
-from syerch.settings import HOST, CLIENT_ID, CLIENT_SECRET
+from syerch.settings import CLIENT_ID, CLIENT_SECRET
 from forms import SearchForm
 import json
 from django.template import loader
