@@ -30,7 +30,7 @@ def index(request):
         form = SearchForm(request.POST)
         print request.POST
         if form.is_valid():
-            city = 'Atlanta'
+            city = form.data.get('city')
             print city
             payload = {'term': form.data.get('search'),
                        'location': city}
